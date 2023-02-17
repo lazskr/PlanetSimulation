@@ -187,14 +187,6 @@ def main():
     clock = pygame.time.Clock() #synchronise the game to a clock (not the speed of the computer)
     
     mercury_distance, mercury_light, venus_distance, venus_light, earth_distance, earth_light, mars_distance, mars_light = NASA_webscrape()
-    print(mercury_distance)
-    print(mercury_light)
-    print(venus_distance)
-    print(venus_light)
-    print(earth_distance)
-    print(earth_light)
-    print(mars_distance)
-    print(mars_light)
     
     #creating the planets
     Sun = Planet(0, 0, 30, YELLOW, 1.98892*10**30)
