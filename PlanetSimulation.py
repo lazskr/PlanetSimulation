@@ -23,30 +23,30 @@ FONT = pygame.font.SysFont("arial", 16, True, False)
 def print_planet_info(MD, ML, VD, VL, ED, EL, MSD, MSL): #M = Mercury and MS = Mars
     #Earth
     font = pygame.font.SysFont("arial", 20, True, False) #last two arguments are for boldness and italics respectively 
-    surface1 = font.render(f"                The current real distance from the Earth to the Sun is {ED} km.", True, (255,255,255)) #text which will appear on screen
-    surface2 = font.render(f"The time it takes for light to reach Earth from the Sun is {EL}.", True, (255,255,255))
+    surface1 = font.render(f"                The current real distance from the Earth to the Sun is {ED} km.", True, WHITE) #text which will appear on screen
+    surface2 = font.render(f"The time it takes for light to reach Earth from the Sun is {EL}.", True, WHITE)
     WIN.blit(surface1, (0,0))
     WIN.blit(surface2, (0,25))
     
     #Mars
     font = pygame.font.SysFont("arial", 20, True, False) #last two arguments are for boldness and italics respectively 
-    surface3 = font.render(f"                The current real distance from the Earth to Mars is {MSD} km.", True, (255,255,255)) #text which will appear on screen
-    surface4 = font.render(f"The time it takes for light to reach Earth from Mars is {MSL}.", True, (255,255,255))
+    surface3 = font.render(f"                The current real distance from the Earth to Mars is {MSD} km.", True, WHITE) #text which will appear on screen
+    surface4 = font.render(f"The time it takes for light to reach Earth from Mars is {MSL}.", True, WHITE)
     WIN.blit(surface3, (830,0))
     WIN.blit(surface4, (830,25))
     
     
     #Venus
     font = pygame.font.SysFont("arial", 20, True, False) #last two arguments are for boldness and italics respectively 
-    surface3 = font.render(f"                The current real distance from the Earth to Mars is {VD} km.", True, (255,255,255)) #text which will appear on screen
-    surface4 = font.render(f"The time it takes for light to reach Earth from Mars is {VL}.", True, (255,255,255))
+    surface3 = font.render(f"                The current real distance from the Earth to Mars is {VD} km.", True, WHITE) #text which will appear on screen
+    surface4 = font.render(f"The time it takes for light to reach Earth from Mars is {VL}.", True, WHITE)
     WIN.blit(surface3, (0,930))
     WIN.blit(surface4, (0,955))
     
     #Mercury
     font = pygame.font.SysFont("arial", 20, True, False) #last two arguments are for boldness and italics respectively 
-    surface3 = font.render(f"                The current real distance from the Earth to Mars is {MD} km.", True, (255,255,255)) #text which will appear on screen
-    surface4 = font.render(f"The time it takes for light to reach Earth from Mars is {ML}.", True, (255,255,255))
+    surface3 = font.render(f"                The current real distance from the Earth to Mars is {MD} km.", True, WHITE) #text which will appear on screen
+    surface4 = font.render(f"The time it takes for light to reach Earth from Mars is {ML}.", True, WHITE)
     WIN.blit(surface3, (820,930))
     WIN.blit(surface4, (820,955))
     
