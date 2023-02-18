@@ -51,12 +51,12 @@ def print_planet_info(MD, ML, VD, VL, ED, EL, MSD, MSL): #M = Mercury and MS = M
     WIN.blit(surface4, (820,955))
     
 
-def NASA_webscrape():
+def Webscrape():
     
     #Mercury - distance from Mercury to Earth and the time it takes light to reach Earth from Mercury
-    html_text4 = requests.get('https://theskylive.com/mercury-info').text
-    soup4 = BeautifulSoup(html_text4, 'lxml')
-    Mercury_distance_km = soup4.find_all('ar')
+    html_text1 = requests.get('https://theskylive.com/mercury-info').text
+    soup1 = BeautifulSoup(html_text1, 'lxml')
+    Mercury_distance_km = soup1.find_all('ar')
     for i, tag in enumerate(Mercury_distance_km):
         if i == 4:
             mercury_distance = tag.text #in km
@@ -64,9 +64,9 @@ def NASA_webscrape():
             mercury_light = tag.text #in minutes
             
     #Venus - distance from Venus to Earth and the time it takes light to reach Earth from Venus       
-    html_text3 = requests.get('https://theskylive.com/venus-info').text
-    soup3 = BeautifulSoup(html_text3, 'lxml')
-    Venus_distance_km = soup3.find_all('ar')
+    html_text2 = requests.get('https://theskylive.com/venus-info').text
+    soup2 = BeautifulSoup(html_text2, 'lxml')
+    Venus_distance_km = soup2.find_all('ar')
     for i, tag in enumerate(Venus_distance_km):
         if i == 4:
             venus_distance = tag.text #in km
@@ -74,9 +74,9 @@ def NASA_webscrape():
             venus_light = tag.text #in minutes
     
     #Earth - distance from the Sun to Earth and the time it takes light to reach Earth from the Sun
-    html_text1 = requests.get('https://theskylive.com/how-far-is-sun').text #to get the full html code in text form (bringing html text of that page)
-    soup1 = BeautifulSoup(html_text1, 'lxml') #parser is lxml
-    Earth_distance_km = soup1.find_all('ar')
+    html_text3 = requests.get('https://theskylive.com/how-far-is-sun').text #to get the full html code in text form (bringing html text of that page)
+    soup3 = BeautifulSoup(html_text3, 'lxml') #parser is lxml
+    Earth_distance_km = soup3.find_all('ar')
     for i, tag in enumerate(Earth_distance_km):
         if i == 0:
             earth_distance = tag.text #in km
@@ -84,9 +84,9 @@ def NASA_webscrape():
             earth_light = tag.text #in minutes
             
     #Mars - distance from Mars to Earth and the time it takes light to reach Earth from Mars
-    html_text2 = requests.get('https://theskylive.com/mars-info').text
-    soup2 = BeautifulSoup(html_text2, 'lxml')
-    Mars_distance_km = soup2.find_all('ar')
+    html_text4 = requests.get('https://theskylive.com/mars-info').text
+    soup4 = BeautifulSoup(html_text4, 'lxml')
+    Mars_distance_km = soup4.find_all('ar')
     for i, tag in enumerate(Mars_distance_km):
         if i == 4:
             mars_distance = tag.text #in km
@@ -186,7 +186,7 @@ def main():
     run = True
     clock = pygame.time.Clock() #synchronise the game to a clock (not the speed of the computer)
     
-    mercury_distance, mercury_light, venus_distance, venus_light, earth_distance, earth_light, mars_distance, mars_light = NASA_webscrape()
+    mercury_distance, mercury_light, venus_distance, venus_light, earth_distance, earth_light, mars_distance, mars_light = Webscrape()
     
     #creating the planets
     Sun = Planet(0, 0, 30, YELLOW, 1.98892*10**30)
